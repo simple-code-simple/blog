@@ -15,6 +15,4 @@
 //    return view('welcome');
 //});
 
-Route::get('/',function(){
-    return view('adminlte');
-});
+Route::get('/', 'TestController@index');
