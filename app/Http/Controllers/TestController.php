@@ -16,7 +16,7 @@ class TestController extends Controller
      */
     public function index()
     {
-        return view('adminlte');
+        return view('test');
     }
 
     /**
@@ -27,6 +27,7 @@ class TestController extends Controller
     public function create()
     {
         //
+
     }
 
     /**

@@ -11,7 +11,14 @@ gulp.task('browser-sync', function() {
         }
     });
 });
- 
+
+// プロキシ実行の場合
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        proxy: "127.0.0.1"
+    });
+});
+
 gulp.task('default', ['browser-sync']);
  
 // Reload all Browsers
@@ -21,5 +28,5 @@ gulp.task('bs-reload', function () {
  
 // Watch scss AND html files, doing different things with each.
 gulp.task('default', ['browser-sync'], function () {
-    gulp.watch("./*.html", ['bs-reload']);
+    gulp.watch("./resources/views/*", ['bs-reload']);
 });
